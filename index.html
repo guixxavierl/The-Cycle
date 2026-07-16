@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="The Cycle Club — início">
-      <img src="assets/logo-cycle.jpg" alt="The Cycle">
+      <img src="assets/logo-cycle.jpg" alt="The Cycle" decoding="async">
       <span>club</span>
     </a>
     <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -40,7 +40,7 @@
       <div class="hero-art reveal" aria-hidden="true">
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
-        <img src="assets/simbolo-cycle.jpg" alt="">
+        <img src="assets/simbolo-cycle.jpg" alt="" decoding="async" fetchpriority="high">
         <span class="art-note">um retorno<br>para você</span>
       </div>
     </section>
@@ -94,7 +94,7 @@
 
     <section class="community section" id="comunidade">
       <div class="community-visual reveal">
-        <img src="assets/gui-ana.jpg" alt="Gui e Ana, criadores do The Cycle">
+        <img src="assets/gui-ana.jpg" alt="Gui e Ana, criadores do The Cycle" loading="lazy" decoding="async">
         <p>Um método criado e conduzido<br>por Gui e Ana.</p>
       </div>
       <div class="community-copy reveal">
@@ -182,7 +182,7 @@
     </section>
 
     <section class="interest" id="interesse">
-      <img src="assets/cycle-practice.jpg" alt="Gui e Ana vivendo uma prática do The Cycle ao ar livre">
+      <img src="assets/cycle-practice.jpg" alt="Gui e Ana vivendo uma prática do The Cycle ao ar livre" loading="lazy" decoding="async">
       <div class="interest-copy reveal">
         <p class="eyebrow">o próximo ciclo começa com uma escolha</p>
         <h2>Você não precisa continuar tentando sustentar tudo sozinho.</h2>
@@ -198,10 +198,14 @@
   </main>
 
   <footer>
-    <div class="footer-brand"><img src="assets/logo-cycle.jpg" alt="The Cycle"><span>club</span></div>
+    <div class="footer-brand"><img src="assets/logo-cycle.jpg" alt="The Cycle" loading="lazy" decoding="async"><span>club</span></div>
     <p>Saúde, wellness e desenvolvimento pessoal vividos em comunidade.</p>
     <p class="legal">O The Cycle Club tem finalidade educacional e não substitui acompanhamento médico, nutricional ou psicológico.</p>
   </footer>
+
+  <div class="mobile-cta" aria-label="Acesso rápido à lista de interesse">
+    <button class="button button-dark interest-trigger" type="button" data-plan="Lista geral">Quero entrar no próximo ciclo</button>
+  </div>
 
   <dialog id="interest-dialog">
     <button class="dialog-close" type="button" aria-label="Fechar">×</button>
