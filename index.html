@@ -1,24 +1,26 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Cycle — uma comunidade para viver com mais presença, constância e consciência.">
-  <meta name="theme-color" content="#615344">
-  <title>The Cycle — Presença para continuar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Cycle Club — método, práticas e comunidade para viver saúde, bem-estar e desenvolvimento pessoal com mais consciência.">
+  <title>The Cycle Club — Presença para continuar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#inicio" aria-label="The Cycle — início">
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="The Cycle Club — início">
       <img src="assets/logo-cycle.jpg" alt="The Cycle">
+      <span>club</span>
     </a>
-    <button class="menu-button" aria-label="Abrir menu" aria-expanded="false">Menu</button>
-    <nav>
-      <a href="#sobre">Sobre</a><a href="#metodo">Método</a><a href="#experiencias">Experiências</a>
+    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Navegação principal">
+      <a href="#metodo">O método</a>
+      <a href="#comunidade">A comunidade</a>
+      <a href="#planos">Planos</a>
       <a class="nav-cta" href="#interesse">Quero fazer parte</a>
     </nav>
   </header>
@@ -26,62 +28,176 @@
   <main>
     <section class="hero" id="inicio">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Move. Pause. Return.</p>
-        <h1>Uma vida mais saudável começa com <em>presença.</em></h1>
-        <p class="lead">O The Cycle é uma comunidade para quem quer sair do piloto automático, criar uma rotina possível e aprender a continuar — com consciência, constância e apoio.</p>
-        <div class="hero-actions"><a class="button button-dark" href="#experiencias">Conheça o The Cycle</a><a class="text-link" href="#metodo">Descubra o método <span>↓</span></a></div>
+        <p class="eyebrow">move. pause. return.</p>
+        <h1>Saúde é um ciclo.<br><em>Aprenda a viver o seu.</em></h1>
+        <p class="lead">Um método de wellness e desenvolvimento pessoal para transformar a forma como você se relaciona com seus hábitos, sua alimentação, suas emoções e sua rotina.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#interesse">Entrar na lista de interesse</a>
+          <a class="text-link" href="#metodo">Conhecer o método <span>↓</span></a>
+        </div>
+        <p class="microcopy">Valores e abertura das inscrições serão anunciados em breve.</p>
       </div>
-      <div class="hero-art reveal">
-        <img src="assets/simbolo-cycle.jpg" alt="Símbolo do The Cycle">
-        <p>Tudo é um ciclo.<br><strong>Até o retorno.</strong></p>
-      </div>
-    </section>
-
-    <section class="statement" id="sobre">
-      <p class="eyebrow light">A nossa filosofia</p>
-      <h2>Você não recomeça do zero.</h2>
-      <p>Cada ciclo vivido transforma você e prepara o próximo. Evoluir não é seguir uma linha reta: é voltar com mais experiência, clareza e consciência. Aqui, você não aprende qual caminho seguir. Aprende a caminhar qualquer caminho com presença.</p>
-    </section>
-
-    <section class="automatico">
-      <div class="section-title reveal"><p class="eyebrow">O que queremos mudar</p><h2>Menos piloto automático.<br><em>Mais vida acontecendo.</em></h2></div>
-      <div class="comparison reveal">
-        <div><span>NO AUTOMÁTICO</span><p>Comparação</p><p>Culpa</p><p>Excesso</p><p>Desconexão</p></div>
-        <div class="arrow">→</div>
-        <div><span>COM PRESENÇA</span><p>Consciência</p><p>Autonomia</p><p>Equilíbrio</p><p>Escolha</p></div>
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <img src="assets/simbolo-cycle.jpg" alt="">
+        <span class="art-note">um retorno<br>para você</span>
       </div>
     </section>
 
-    <section class="method" id="metodo">
-      <div class="method-intro reveal"><p class="eyebrow">Método The Cycle</p><h2>Clareza para escolher.<br>Prática para <em>continuar.</em></h2><p>Uma ferramenta de desenvolvimento pessoal, saúde e bem-estar para compreender comportamentos e transformar intenção em uma rotina que faça sentido para você.</p></div>
-      <div class="steps">
-        <article class="step reveal"><b>01</b><h3>Observar</h3><p>Perceber pensamentos, emoções, comportamentos e sinais do corpo antes de reagir.</p><small>O que está acontecendo agora?</small></article>
-        <article class="step reveal"><b>02</b><h3>Revelar</h3><p>Separar fatos de interpretações e entender o que realmente conduz cada escolha.</p><small>O que está por trás disso?</small></article>
-        <article class="step reveal"><b>03</b><h3>Liberar</h3><p>Deixar de carregar hábitos, expectativas e estratégias que já não servem.</p><small>O que não preciso repetir?</small></article>
-        <article class="step reveal"><b>04</b><h3>Criar</h3><p>Transformar clareza em decisão, decisão em ação e ação em uma rotina possível.</p><small>O que escolho construir agora?</small></article>
+    <section class="statement dark-section reveal">
+      <p class="section-number">01 — uma nova forma de cuidar</p>
+      <blockquote>Você não precisa recomeçar do zero. Precisa aprender a <em>observar, compreender e conduzir</em> o ciclo em que já está.</blockquote>
+    </section>
+
+    <section class="method section" id="metodo">
+      <div class="section-heading reveal">
+        <p class="eyebrow">the cycle method</p>
+        <h2>Um método para a vida que acontece de verdade.</h2>
+        <p>The Cycle integra saúde, hábitos, emoções, alimentação e autoconhecimento. Em vez de buscar controle ou perfeição, você aprende a reconhecer seus movimentos e fazer escolhas mais conscientes.</p>
+      </div>
+      <div class="orlc-grid">
+        <article class="reveal"><span>O</span><h3>Observar</h3><p>Perceber padrões, sinais e necessidades antes de agir no automático.</p></article>
+        <article class="reveal"><span>R</span><h3>Revelar</h3><p>Dar nome ao que está por trás dos hábitos, emoções e decisões.</p></article>
+        <article class="reveal"><span>L</span><h3>Liberar</h3><p>Abrir espaço para soltar excessos, culpas e caminhos que já não servem.</p></article>
+        <article class="reveal"><span>C</span><h3>Criar</h3><p>Construir escolhas possíveis, sustentáveis e coerentes com sua fase atual.</p></article>
       </div>
     </section>
 
-    <section class="quote"><img src="assets/selo-cycle.jpg" alt="Selo The Cycle"><blockquote>“Não quero mais isso” é apenas o começo. A pergunta mais importante é: <em>o que eu quero viver no lugar?</em></blockquote></section>
-
-    <section class="experiences" id="experiencias">
-      <div class="section-title reveal"><p class="eyebrow">Experiências The Cycle</p><h2>Um caminho para cada <em>momento.</em></h2><p>Escolha o nível de apoio que combina com o ciclo que você quer construir. Valores e datas serão anunciados em breve.</p></div>
-      <div class="plans">
-        <article class="plan reveal"><p class="plan-label">CYCLE ESSENTIAL</p><h3>Comece com direção.</h3><p>Para quem quer conhecer o método e iniciar uma rotina mais consciente.</p><ul><li>Jornada guiada pelo Método The Cycle</li><li>Conteúdos e práticas exclusivas</li><li>Comunidade para caminhar junto</li><li>Encontros online coletivos</li></ul><a href="#interesse">Tenho interesse →</a></article>
-        <article class="plan featured reveal"><p class="plan-label">CYCLE CLUB</p><span class="tag">EXPERIÊNCIA COMPLETA</span><h3>Constância com acompanhamento.</h3><p>Para quem deseja apoio contínuo, encontros e experiências ao longo do ciclo.</p><ul><li>Tudo do Essential</li><li>Acompanhamento online frequente</li><li>Aulas e encontros com especialistas</li><li>Benefícios e experiências exclusivas</li><li>2 participações em encontros especiais</li></ul><a href="#interesse">Quero fazer parte →</a></article>
-        <article class="plan reveal"><p class="plan-label">CYCLE INDIVIDUAL</p><h3>Seu ciclo, de perto.</h3><p>Para quem busca uma jornada pessoal, com direcionamento e atenção individual.</p><ul><li>Tudo do Cycle Club</li><li>Acompanhamento individual</li><li>Plano alinhado ao seu momento</li><li>Check-ins e ajustes de rota</li></ul><a href="#interesse">Tenho interesse →</a></article>
+    <section class="applications section-soft">
+      <div class="application-title reveal">
+        <p class="eyebrow">o método no cotidiano</p>
+        <h2>Bem-estar que sai do discurso e entra na rotina.</h2>
+      </div>
+      <div class="application-list reveal">
+        <div><span>01</span><strong>Saúde & wellness</strong><p>Escuta do corpo, energia, descanso e escolhas de cuidado.</p></div>
+        <div><span>02</span><strong>Hábitos & rotina</strong><p>Consistência possível, sem depender de motivação perfeita.</p></div>
+        <div><span>03</span><strong>Alimentação</strong><p>Mais presença e consciência na relação com a comida.</p></div>
+        <div><span>04</span><strong>Emoções</strong><p>Reconhecer o que sente e responder com mais clareza.</p></div>
+        <div><span>05</span><strong>Desenvolvimento pessoal</strong><p>Conduzir mudanças respeitando seu ritmo e momento de vida.</p></div>
       </div>
     </section>
 
-    <section class="community"><div class="community-art"><img src="assets/logo-gradiente.png" alt="Símbolo The Cycle em luz quente"></div><div class="community-copy reveal"><p class="eyebrow">Mais que um programa</p><h2>Uma comunidade para lembrar que você não precisa caminhar sozinho.</h2><p>Evoluímos melhor quando caminhamos juntos. O The Cycle cria espaço para troca, apoio, prática e retorno — sem competição e sem a cobrança de ser perfeito.</p><ul><li>Presença antes de performance</li><li>Constância antes de perfeição</li><li>Comunidade antes de comparação</li></ul></div></section>
+    <section class="community section" id="comunidade">
+      <div class="community-visual reveal">
+        <img src="assets/logo-gradiente.png" alt="Monograma The Cycle">
+        <p>Não é apenas conteúdo.<br>É prática compartilhada.</p>
+      </div>
+      <div class="community-copy reveal">
+        <p class="eyebrow">the cycle club</p>
+        <h2>O método é o caminho.<br>A comunidade ajuda você a continuar.</h2>
+        <p>Um espaço exclusivo para compartilhar práticas, descobertas e os movimentos da vida real. Você aprende com outras pessoas, encontra repertório para o cotidiano e conta com a presença de Gui e Ana conduzindo o grupo.</p>
+        <ul class="check-list">
+          <li>Comunidade oficial no WhatsApp</li>
+          <li>Conteúdo exclusivo nos Melhores Amigos</li>
+          <li>Encontros ao vivo e práticas coletivas</li>
+          <li>Dicas para aplicar o método na rotina</li>
+          <li>Direcionamento coletivo de Gui e Ana</li>
+        </ul>
+        <p class="disclaimer-inline">O acompanhamento acontece em grupo e não corresponde a atendimento individual.</p>
+      </div>
+    </section>
+
+    <section class="journey section-soft" id="jornada">
+      <div class="section-heading reveal">
+        <p class="eyebrow">sua jornada no clube</p>
+        <h2>Você não entra sem direção.</h2>
+        <p>Desde o primeiro dia, cada etapa foi pensada para ajudar você a entender onde está, começar a praticar e reconhecer sua própria evolução.</p>
+      </div>
+      <ol class="journey-list">
+        <li class="reveal"><span>01</span><div><h3>Boas-vindas</h3><p>Você conhece os espaços do clube, a dinâmica dos encontros e como aproveitar a comunidade.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Mapa do Ciclo Atual</h3><p>Um diagnóstico de entrada para reconhecer seu momento, suas necessidades e seu foco inicial.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Método e primeira prática</h3><p>Você aprende o ORLC e começa com uma prática simples, possível e aplicável à sua rotina.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Aplicação acompanhada</h3><p>Encontros, conteúdos e conversas ajudam a levar o método para hábitos, alimentação, emoções e saúde.</p></div></li>
+        <li class="reveal"><span>05</span><div><h3>Revisão e novo ciclo</h3><p>Você observa sua evolução e retorna ao método com mais clareza para a próxima etapa.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="plans section" id="planos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">escolha sua experiência</p>
+        <h2>Um plano para cada profundidade.</h2>
+        <p>Os valores serão divulgados em breve. Por enquanto, conheça o que fará parte de cada experiência.</p>
+      </div>
+      <div class="plans-grid">
+        <article class="plan-card reveal">
+          <p class="plan-time">1 mês de acesso</p>
+          <h3>Essential</h3>
+          <p class="plan-intro">Para conhecer o método e iniciar seu primeiro ciclo com direção.</p>
+          <ul>
+            <li>Comunidade no WhatsApp</li><li>Melhores Amigos do Cycle</li><li>Método The Cycle</li><li>Mapa do seu Ciclo Atual</li><li>Encontros coletivos ao vivo</li><li>Direcionamento de Gui e Ana</li>
+          </ul>
+          <button class="button button-outline interest-trigger" type="button" data-plan="Essential">Tenho interesse</button>
+        </article>
+        <article class="plan-card plan-featured reveal">
+          <span class="badge">mais escolhido</span>
+          <p class="plan-time">3 meses de acesso</p>
+          <h3>Plus</h3>
+          <p class="plan-intro">Para aprofundar a prática, acompanhar padrões e criar consistência.</p>
+          <p class="includes">Tudo do Essential, mais:</p>
+          <ul>
+            <li>Cycle Planner</li><li>Diário ORLC</li><li>Guia do Retorno</li>
+          </ul>
+          <button class="button button-dark interest-trigger" type="button" data-plan="Plus">Tenho interesse</button>
+        </article>
+        <article class="plan-card plan-premium reveal">
+          <p class="plan-time">6 meses de acesso</p>
+          <h3>Premium</h3>
+          <p class="plan-intro">A experiência mais completa para viver, acompanhar e aprofundar o método.</p>
+          <p class="includes">Tudo do Plus, mais:</p>
+          <ul>
+            <li>6 encontros online exclusivos de acompanhamento</li><li>2 participações garantidas no The Cycle Experience</li><li>Box The Cycle</li><li>Direcionamento coletivo mais próximo</li>
+          </ul>
+          <button class="button button-light interest-trigger" type="button" data-plan="Premium">Tenho interesse</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience dark-section">
+      <div class="experience-copy reveal">
+        <p class="eyebrow">exclusivo premium</p>
+        <h2>The Cycle Experience</h2>
+        <p>Dois encontros presenciais para viver o método com o corpo, a natureza e a comunidade — em experiências que podem reunir yoga, treino, meditação e práticas ao ar livre.</p>
+        <p class="experience-quote">Dois encontros presenciais para viver o método. Seis encontros exclusivos para acompanhar a sua evolução.</p>
+      </div>
+      <img class="experience-seal reveal" src="assets/selo-cycle.jpg" alt="Selo The Cycle — Move, Pause, Return">
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="section-heading reveal"><p class="eyebrow">perguntas frequentes</p><h2>Antes de começar</h2></div>
+      <div class="faq-list reveal">
+        <details><summary>Preciso já conhecer o método?</summary><p>Não. A experiência começa pelas boas-vindas, pelo Mapa do Ciclo Atual e pela apresentação do método.</p></details>
+        <details><summary>O acompanhamento é individual?</summary><p>Não. Gui e Ana estarão presentes com orientações, práticas e respostas dentro da dinâmica coletiva do clube.</p></details>
+        <details><summary>Os encontros ficam gravados?</summary><p>Os detalhes de gravação e disponibilidade serão confirmados antes da abertura das inscrições.</p></details>
+        <details><summary>Quando os valores serão divulgados?</summary><p>Após a definição final dos custos e condições. Quem estiver na lista de interesse será avisado primeiro.</p></details>
+      </div>
+    </section>
 
     <section class="interest" id="interesse">
-      <div><p class="eyebrow light">O próximo ciclo começa aqui</p><h2>É hora de continuar.</h2><p>Estamos preparando as próximas experiências do The Cycle. Entre na lista para receber as novidades primeiro.</p></div>
-      <form id="interest-form"><label><span>Seu nome</span><input name="name" autocomplete="name" placeholder="Como podemos chamar você?" required></label><label><span>Seu melhor e-mail</span><input type="email" name="email" autocomplete="email" placeholder="voce@email.com" required></label><button class="button button-light" type="submit">Quero receber novidades</button><small>Sem spam. Apenas novidades sobre o The Cycle.</small><p class="form-message" role="status"></p></form>
+      <img src="assets/logo-cycle.jpg" alt="The Cycle — Move. Pause. Return.">
+      <div class="interest-copy reveal">
+        <p class="eyebrow">o próximo ciclo começa aqui</p>
+        <h2>Seja uma das primeiras pessoas a receber a abertura do The Cycle Club.</h2>
+        <p>Entre na lista de interesse para receber datas, valores e condições de lançamento.</p>
+        <button class="button button-light interest-trigger" type="button" data-plan="Lista geral">Quero ser avisado</button>
+      </div>
     </section>
   </main>
 
-  <footer><img src="assets/logo-cycle.jpg" alt="The Cycle"><p>Presença para viver. Consciência para escolher.</p><p>© 2026 The Cycle</p></footer>
+  <footer>
+    <div class="footer-brand"><img src="assets/logo-cycle.jpg" alt="The Cycle"><span>club</span></div>
+    <p>Saúde, wellness e desenvolvimento pessoal vividos em comunidade.</p>
+    <p class="legal">O The Cycle Club tem finalidade educacional e não substitui acompanhamento médico, nutricional ou psicológico.</p>
+  </footer>
+
+  <dialog id="interest-dialog">
+    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+    <p class="eyebrow">lista de interesse</p>
+    <h2>Estamos preparando a abertura.</h2>
+    <p id="dialog-plan"></p>
+    <p>Assim que o formulário oficial estiver pronto, este botão levará direto para a inscrição. A página já está preparada para receber esse link.</p>
+    <button class="button button-dark dialog-ok" type="button">Entendi</button>
+  </dialog>
   <script src="script.js"></script>
 </body>
 </html>
