@@ -20,6 +20,13 @@ const observer = new IntersectionObserver((entries) => entries.forEach((entry) =
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
+document.addEventListener('click', (event) => {
+  if (!nav?.classList.contains('open')) return;
+  if (nav.contains(event.target) || menuButton?.contains(event.target)) return;
+  nav.classList.remove('open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+});
+
 const dialog = document.querySelector('#interest-dialog');
 const dialogPlan = document.querySelector('#dialog-plan');
 
