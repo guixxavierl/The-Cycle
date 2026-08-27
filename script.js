@@ -23,7 +23,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 900) setMenu(false);
+  if (window.innerWidth >= 980) setMenu(false);
 });
 
 const updateHeader = () => {
