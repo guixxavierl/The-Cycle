@@ -1,47 +1,55 @@
+const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('#site-nav');
+const menuLabel = menuButton?.querySelector('.sr-only');
+
+const setMenu = (open) => {
+  nav?.classList.toggle('open', open);
+  menuButton?.setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('menu-open', open);
+  if (menuLabel) menuLabel.textContent = open ? 'Fechar menu' : 'Abrir menu';
+};
 
 menuButton?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
+  setMenu(menuButton.getAttribute('aria-expanded') !== 'true');
 });
 
-nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuButton?.setAttribute('aria-expanded', 'false');
-}));
-
-const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  }
-}), { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-
-document.addEventListener('click', (event) => {
-  if (!nav?.classList.contains('open')) return;
-  if (nav.contains(event.target) || menuButton?.contains(event.target)) return;
-  nav.classList.remove('open');
-  menuButton?.setAttribute('aria-expanded', 'false');
+nav?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMenu(false));
 });
 
-const dialog = document.querySelector('#interest-dialog');
-const dialogPlan = document.querySelector('#dialog-plan');
-
-document.querySelectorAll('.interest-trigger').forEach((button) => {
-  button.addEventListener('click', () => {
-    const plan = button.dataset.plan;
-    dialogPlan.textContent = plan === 'Lista geral'
-      ? 'Você demonstrou interesse na abertura do The Cycle Club.'
-      : `Seu interesse: plano ${plan}.`;
-    dialog.showModal();
-  });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenu(false);
 });
 
-document.querySelector('.dialog-close')?.addEventListener('click', () => dialog.close());
-document.querySelector('.dialog-ok')?.addEventListener('click', () => dialog.close());
-dialog?.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) setMenu(false);
+});
+
+const updateHeader = () => {
+  header?.classList.toggle('scrolled', window.scrollY > 24);
+};
+
+updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
+
+const reveals = document.querySelectorAll('.reveal');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  reveals.forEach((element) => element.classList.add('visible'));
+} else {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px' });
+
+  reveals.forEach((element) => observer.observe(element));
+}
+
+document.querySelectorAll('[data-year]').forEach((element) => {
+  element.textContent = new Date().getFullYear();
 });

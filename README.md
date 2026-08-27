@@ -1,7 +1,11 @@
-# The Cycle
+# The Cycle Club
 
-Landing page oficial do The Cycle — uma comunidade de presença, constância e consciência.
+Página oficial do The Cycle Club, construída a partir da identidade visual e da arquitetura oficial do ecossistema The Cycle.
+
+## Experiência
+
+A página apresenta a filosofia do ciclo, o Método ORLC, a jornada do membro, as ferramentas e os planos Essential, Plus e Premium. As ações de interesse direcionam para o WhatsApp oficial.
 
 ## Publicação
 
-Site estático preparado para GitHub Pages. Os links definitivos de inscrição e redes sociais podem ser adicionados depois em `index.html`.
+Site estático publicado com GitHub Pages.
