@@ -25,6 +25,7 @@ footer,
 .plan-premium {
   box-shadow: none;
 }
+.plan-plus { box-shadow: 0 14px 34px rgba(49, 16, 17, .07); }
 .plan h3 { color: var(--wine); }
 .plan-plus h3 { color: var(--moss); }
 .plan-premium h3 { color: var(--wine); }
@@ -59,8 +60,8 @@ footer,
 @media (max-width: 759px) {
   .section { padding-top: 64px; padding-bottom: 64px; }
   .hero { padding-bottom: 56px; }
-  .hero-media { min-height: 445px; margin-top: 38px; }
-  .hero-photo { height: 390px; filter: saturate(.94) contrast(.98); }
+  .hero-media { min-height: 392px; margin-top: 32px; }
+  .hero-photo { height: 340px; filter: none; }
   .hero-ring { width: 102vw; }
   .hero-media > p { max-width: 185px; font-size: 18px; }
   .automatic { padding-top: 64px; padding-bottom: 64px; }
@@ -70,13 +71,13 @@ footer,
   .checkin-card, .nutrition-card { padding: 28px 22px; }
   .plans-heading { margin-bottom: 36px; }
   .founders-photo { height: 430px; }
-  .founders-photo img { filter: saturate(.92) contrast(.98); }
+  .founders-photo img { filter: none; }
 }
 
 .hero-photo,
 .founders-photo img,
 .experience-photo img {
-  filter: saturate(.94) contrast(.98);
+  filter: none;
 }
 
 .sales-bridge {
@@ -124,4 +125,37 @@ footer,
   .sales-bridge-actions .button,
   .sales-bridge-actions .text-link { width: auto; }
   .sales-bridge-actions .text-link { border: 0; border-bottom: 1px solid currentColor; border-radius: 0; padding: 0; }
+}
+
+
+/* Final correction: solid cream chrome and scan-first plan hierarchy. */
+.site-header,
+.mobile-cta {
+  background: var(--cream);
+  backdrop-filter: none;
+}
+.plan-head {
+  display: flex;
+  flex-direction: column;
+}
+.plan-head h3 {
+  margin: 0 0 8px;
+}
+.plan-head > span {
+  margin-bottom: 2px;
+}
+.plan-description {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.12;
+}
+.plan .price {
+  margin-top: 18px;
+}
+.plan .price-note {
+  margin-top: 4px;
+}
+@media (min-width: 760px) {
+  .plan-description { font-size: 24px; }
 }

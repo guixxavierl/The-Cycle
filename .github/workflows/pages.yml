@@ -23,7 +23,6 @@ jobs:
     steps:
       - name: Baixar o site
         uses: actions/checkout@v4
-
       - name: Configurar Pages
         uses: actions/configure-pages@v5
 
@@ -31,15 +30,14 @@ jobs:
         shell: bash
         run: |
           VERSION="${GITHUB_SHA::12}"
-          sed -i "s|href=\"styles.css\"|href=\"styles.css?v=${VERSION}\"|" index.html
-          sed -i "s|href=\"polish.css\"|href=\"polish.css?v=${VERSION}\"|" index.html
-          sed -i "s|src=\"script.js\"|src=\"script.js?v=${VERSION}\"|" index.html
+          sed -Ei "s|href=\"styles\\.css(\\?v=[^\"]*)?\"|href=\"styles.css?v=${VERSION}\"|" index.html
+          sed -Ei "s|href=\"polish\\.css(\\?v=[^\"]*)?\"|href=\"polish.css?v=${VERSION}\"|" index.html
+          sed -Ei "s|src=\"script\\.js(\\?v=[^\"]*)?\"|src=\"script.js?v=${VERSION}\"|" index.html
 
       - name: Preparar arquivos
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
-
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v4
