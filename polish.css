@@ -19,18 +19,18 @@ footer,
 .plan-premium {
   background: var(--paper);
   color: var(--ink);
-  border-color: rgba(49, 16, 17, .18);
+  border-color: rgba(47, 16, 16, .18);
 }
 .plan-plus,
 .plan-premium {
   box-shadow: none;
 }
-.plan-plus { box-shadow: 0 14px 34px rgba(49, 16, 17, .07); }
+.plan-plus { box-shadow: 0 14px 34px rgba(47, 16, 16, .07); }
 .plan h3 { color: var(--wine); }
 .plan-plus h3 { color: var(--moss); }
 .plan-premium h3 { color: var(--wine); }
 .plan-premium .plan-head > span { color: var(--moss); }
-.plan-premium li { border-color: rgba(49, 16, 17, .17); }
+.plan-premium li { border-color: rgba(47, 16, 16, .17); }
 .plan-premium .button-cream {
   background: var(--wine);
   color: var(--cream);
