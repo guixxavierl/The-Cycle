@@ -5,7 +5,6 @@ html,
 body,
 .hero,
 .integrated,
-.care,
 .plans,
 .faq,
 footer,
@@ -33,7 +32,7 @@ footer,
 .plan-premium li { border-color: rgba(47, 16, 16, .17); }
 .plan-premium .button-cream {
   background: var(--wine);
-  color: var(--cream);
+  color: var(--white);
 }
 .plan-premium .button-cream:hover { background: #4a181a; }
 .plan-plus .button-wine,
@@ -54,7 +53,7 @@ footer,
 }
 .plan-premium .plan-badge {
   background: var(--wine);
-  color: var(--cream);
+  color: var(--white);
 }
 
 @media (max-width: 759px) {
