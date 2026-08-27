@@ -1,0 +1,72 @@
+/* Final sales-page polish: mobile rhythm, imagery and conversion */
+
+@media (max-width: 759px) {
+  .section { padding-top: 64px; padding-bottom: 64px; }
+  .hero { padding-bottom: 56px; }
+  .hero-media { min-height: 445px; margin-top: 38px; }
+  .hero-photo { height: 390px; filter: saturate(.94) contrast(.98); }
+  .hero-ring { width: 102vw; }
+  .hero-media > p { max-width: 185px; font-size: 18px; }
+  .automatic { padding-top: 64px; padding-bottom: 64px; }
+  .territories, .club-grid { margin-top: 34px; }
+  .integrated-statement, .club-summary { margin-top: 34px; }
+  .care-heading { margin-bottom: 32px; }
+  .checkin-card, .nutrition-card { padding: 28px 22px; }
+  .plans-heading { margin-bottom: 36px; }
+  .founders-photo { height: 430px; }
+  .founders-photo img { filter: saturate(.92) contrast(.98); }
+}
+
+.hero-photo,
+.founders-photo img,
+.experience-photo img {
+  filter: saturate(.94) contrast(.98);
+}
+
+.sales-bridge {
+  padding: 34px 20px;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.sales-bridge p {
+  max-width: 690px;
+  margin: 0 auto 18px;
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.12;
+}
+.sales-bridge-actions {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.sales-bridge-actions .button,
+.sales-bridge-actions .text-link { width: 100%; }
+.sales-bridge-actions .text-link {
+  border: 1px solid var(--wine);
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+
+.compact-copy { max-width: 720px; }
+.micro-value {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+@media (min-width: 760px) {
+  .sales-bridge { padding: 48px 6vw; }
+  .sales-bridge p { font-size: 31px; }
+  .sales-bridge-actions { align-items: center; flex-direction: row; max-width: none; }
+  .sales-bridge-actions .button,
+  .sales-bridge-actions .text-link { width: auto; }
+  .sales-bridge-actions .text-link { border: 0; border-bottom: 1px solid currentColor; border-radius: 0; padding: 0; }
+}
