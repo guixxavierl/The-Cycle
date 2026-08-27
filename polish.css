@@ -1,5 +1,61 @@
 /* Final sales-page polish: mobile rhythm, imagery and conversion */
 
+/* Keep the landing page grounded in the brand cream. Accent sections may still use wine/blue/moss intentionally. */
+html,
+body,
+.hero,
+.integrated,
+.care,
+.plans,
+.faq,
+footer,
+.sales-bridge {
+  background: var(--cream);
+}
+
+/* Plans should read as one product family: same card base, differentiated by accents rather than full-card color blocks. */
+.plan,
+.plan-plus,
+.plan-premium {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: rgba(49, 16, 17, .18);
+}
+.plan-plus,
+.plan-premium {
+  box-shadow: none;
+}
+.plan h3 { color: var(--wine); }
+.plan-plus h3 { color: var(--moss); }
+.plan-premium h3 { color: var(--wine); }
+.plan-premium .plan-head > span { color: var(--moss); }
+.plan-premium li { border-color: rgba(49, 16, 17, .17); }
+.plan-premium .button-cream {
+  background: var(--wine);
+  color: var(--cream);
+}
+.plan-premium .button-cream:hover { background: #4a181a; }
+.plan-plus .button-wine,
+.plan .button-outline,
+.plan-premium .button-cream { border-color: var(--wine); }
+.plan-plus {
+  border-top: 4px solid var(--moss);
+}
+.plan-premium {
+  border-top: 4px solid var(--wine);
+}
+.plan-badge {
+  margin-bottom: 24px;
+}
+.plan-plus .plan-badge {
+  background: var(--moss);
+  color: var(--wine);
+}
+.plan-premium .plan-badge {
+  background: var(--wine);
+  color: var(--cream);
+}
+
 @media (max-width: 759px) {
   .section { padding-top: 64px; padding-bottom: 64px; }
   .hero { padding-bottom: 56px; }
@@ -25,7 +81,6 @@
 
 .sales-bridge {
   padding: 34px 20px;
-  background: var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   text-align: center;
